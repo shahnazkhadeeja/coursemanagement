@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<div class="row">
+  <div class="testbox">
+      <form (ngSubmit)="AddUser()" #userSignup="ngForm">
+        <div class="banner">
+          <h1>Student Registration Form</h1>
+        </div>
+       
+        <div class="item">
+          <p>Name</p>
+          <div class="name-item">
+            <input type="text" name="uname" [(ngModel)]="student.uname" placeholder="Name"/>
+            
+          </div>
+        </div>
+        
+        
+        <div class="item">
+          <p>Email</p>
+          <input type="email" name="email" #email="ngModel" pattern="^[a-zA-Z0-9.%+]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}" [(ngModel)]="student.email" [class.is-invalid]="email.invalid && email.touched"
+          required/>
+          <!-- <small [class.d-name]="email.valid || email.touched" class="text-danger" >Enter Valid Email</small> -->
+        </div>
+         <div class="item">
+          <p>Password</p>
+          <input type="password" name="password" #password="ngModel" [class.is-invalid]=" password.touched" [(ngModel)]="student.password" required minlength="8"/>
+        </div>
+        <div class="item">
+          <p>Repeat Password</p>
+          <input type="password" name="repeatpassword" [(ngModel)]="student.repeatpassword"/>
+          <small for="message" id="message" class="text-danger">{{message}}</small>
+        </div>
+        <div class="question">
+          <p>Privacy Policy<span class="required">*</span></p>
+          <div class="question-answer checkbox-item">
+            <div>
+              <input type="checkbox" value="none" id="check_1" name="check" required/>
+              <label for="check_1" class="check"><span>I agree to the <a href="https://www.w3docs.com/privacy-policy">privacy policy.</a></span></label>
+            </div>
+          </div>
+        </div>
+        <div class="btn-block">
+          <button type="submit" href="/">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="column">
+      <img src="https://www.macroconnect.net/wp-content/uploads/2018/05/student-registration.jpg" alt="Forest" style="width:100%">
+  </div>

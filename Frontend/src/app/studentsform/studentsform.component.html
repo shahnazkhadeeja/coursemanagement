@@ -1,0 +1,102 @@
+<div class="main">
+   
+  <div class="row">
+      <h4> Apply For Course</h4>
+      <br>
+      <br>
+      <div class="container">  
+        <form id="contact" (ngSubmit)="apply()" #student="ngForm">
+          <h3>Details Form</h3>
+          
+          <fieldset>
+            <input placeholder="Name of the candidate" type="text" tabindex="1" name="name" [(ngModel)]="studentdata.name" required autofocus>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Email" type="text" tabindex="2" name="email" [(ngModel)]="studentdata.email"required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Course Duration" type="text" tabindex="3" name="duration" [(ngModel)]="course.duration" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Venue for Course" type="text" tabindex="4"name="venue" [(ngModel)]="course.venue" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Address" tabindex="5" type="text" name="address" [(ngModel)]="studentdata.address" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Qualification" tabindex="5"name="qulification" [(ngModel)]="studentdata.qulification" type="text" required>
+          </fieldset>
+          <fieldset>
+            <select class="browser-default" name="course" [(ngModel)]="studentdata.course"  required>
+              <option value="" disabled selected >Choose your course</option>
+              <option *ngFor="let courses of course">{{courses.title}}</option>
+            </select>
+              <label>Browser Select</label>   <br><br>
+         
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit"[disabled]="student.form.invalid"  id="contact-submit" data-submit="...Sending">Submit</button>
+          </fieldset>
+          
+        </form>
+      </div>
+<!-- <div class="main">
+    <div class=" row second">
+        <h4> APPLY </h4>
+        <br>
+        <br>
+        <form (ngSubmit)="apply()" #student="ngForm" class="col s8" style="margin-left: 30px;" >
+          <div class="row">
+            <div class="input-field col s6">
+              <input placeholder="" name="name" [(ngModel)]="studentdata.name" id="Title" type="text" class="validate" required>
+              <label for="first_name">NAME</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" name="lastname" [(ngModel)]="studentdata.lastname"  placeholder="" type="text" class="validate" required>
+              <label for="last_name">LAST NAME</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input  id="Description" name="email" [(ngModel)]="studentdata.email" placeholder="" type="text" class="validate" required>
+              <label for="Description">EMAIL</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="address"name="address" [(ngModel)]="studentdata.address" placeholder="" type="text" class="validate" required>
+              <label for="ADDRESS">ADDRESS</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+              <input id="StartDate" name="dob" [(ngModel)]="studentdata.dob" type="date" class="validate" required>
+              <label for="StartDate"> DATE OF BIRTH</label>
+            </div>
+            <div class="input-field col s4">
+                <input id="EndDate" name="qulification" [(ngModel)]="studentdata.qulification" type="text" class="validate" required>
+                <label for="EndDate">QULIFICATION </label>
+              </div>
+           </div>
+      
+          <div class="input-field col s6"  > -->
+        <!-- <label>Browser Select</label> -->
+        <!-- <br><br> -->
+          <!-- <select class="browser-default" name="course" [(ngModel)]="studentdata.course"  required>
+            <option value="" disabled selected >Choose your course</option>
+            <option *ngFor="let courses of course">{{courses.title}}</option>
+          </select> -->
+            <!-- <label>Browser Select</label>   <br><br> -->
+      <!-- </div>
+
+        
+          <div class="input-field col s6"> -->
+            <!-- <br><br> -->
+            <!-- <button type="submit" [disabled]="student.form.invalid" class="btn btn-success float-right">APPLY</button>
+          </div>
+        
+        </form>
+        
+      
+      </div>
+    </div> -->

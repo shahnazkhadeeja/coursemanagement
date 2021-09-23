@@ -1,0 +1,37 @@
+<div class="main">
+   
+<div class="row">
+    <h4> ADD COURSE </h4>
+    <br>
+    <br>
+    <div class="container">  
+      <form id="contact" (ngSubmit)="newcourse()"#courseform="ngForm">
+        <h3>Details Form</h3>
+        
+        <fieldset>
+          <input placeholder="Course name" type="text" tabindex="1" name="title" [(ngModel)]="course.title" required autofocus>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Description" type="text" tabindex="2"name="description" [(ngModel)]="course.description"required>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Course Duration" type="text" tabindex="3" name="duration" [(ngModel)]="course.duration" required>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Venue for Course" type="text" tabindex="4"name="venue" [(ngModel)]="course.venue" required>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Start Date" tabindex="5"name="startdate" type="date" [(ngModel)]="course.startdate" required>
+        </fieldset>
+        <fieldset>
+          <input placeholder="End Date" tabindex="5"name="endtdate" type="date" [(ngModel)]="course.enddate" required>
+        </fieldset>
+        <fieldset>
+          <button name="submit" type="submit" [disabled]="courseform.form.invalid" id="contact-submit" data-submit="...Sending">Submit</button>
+        </fieldset>
+        
+      </form>
+    </div>
+
+
+   

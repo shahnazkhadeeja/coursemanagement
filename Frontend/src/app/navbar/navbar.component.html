@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<nav>
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+          <a href="#home" class="w3-bar-item w3-button"><b>Course</b> Management System</a>
+          <!-- Float links to the right. Hide them on small screens -->
+          <div class="w3-right w3-hide-small">
+            <a  routerLink="" *ngIf="!auth.StudentloggedIn() && !auth.ProfessorloggedIn()" class="w3-bar-item w3-button">HOME</a>
+            
+            <a routerLink="/students" class="w3-bar-item w3-button"*ngIf="!auth.StudentloggedIn() && !auth.ProfessorloggedIn()">STUDENTS</a>
+            <a routerLink="/professor"class="w3-bar-item w3-button" *ngIf="!auth.StudentloggedIn() && !auth.ProfessorloggedIn()">PROFESSORS</a>
+            <a routerLink="/courses" class="w3-bar-item w3-button"*ngIf="auth.ProfessorloggedIn()||auth.StudentloggedIn() " >COURSES</a>
+            <a routerLink="/courseform" class="w3-bar-item w3-button"*ngIf="auth.ProfessorloggedIn()" >ADD COURSE</a>  
+            <a routerLink="/apply" class="w3-bar-item w3-button"*ngIf="auth.StudentloggedIn()" >APPLY</a>
+            <a routerLink="/studentlist"  class="w3-bar-item w3-button"*ngIf="auth.ProfessorloggedIn()">STUDENT LIST</a>
+            <a routerLink="/accepted" class="w3-bar-item w3-button" *ngIf="auth.ProfessorloggedIn()">ACCEPTED STUDENTS</a>
+            <a routerLink="/profile" class="w3-bar-item w3-button"  *ngIf="auth.StudentloggedIn()">PROFILE</a>
+            <a routerLink="/professorprofile" class="w3-bar-item w3-button" *ngIf="auth.ProfessorloggedIn()">PROFILE</a>
+           <a routerLink="/logout" class="w3-bar-item w3-button" *ngIf="auth.ProfessorloggedIn()||auth.StudentloggedIn() " (click)="logout()" >LOGOUT</a>
+
+        </div>
+         </div>
+      </div>
+    <!-- <div class="nav-wrapper">
+      <p  class="brand-logo">Course Management System</p>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+            <a routerLink="/" *ngIf="!auth.StudentloggedIn() && !auth.ProfessorloggedIn()">HOME</a>
+        </li>
+        <li>
+            <a routerLink="/students" *ngIf="!auth.StudentloggedIn() && !auth.ProfessorloggedIn()">STUDENTS</a>
+        </li>
+        <li>
+            <a routerLink="/professor" *ngIf="!auth.StudentloggedIn() && !auth.ProfessorloggedIn()">PROFESSORS</a>
+        </li>
+      
+        <li>
+            <a routerLink="/courses" *ngIf="auth.ProfessorloggedIn()||auth.StudentloggedIn() " >COURSES</a>
+        </li>
+        <li>
+            <a routerLink="/courseform" *ngIf="auth.ProfessorloggedIn()" >ADD COURSE</a>
+        </li>
+        <li>
+            <a routerLink="/apply" *ngIf="auth.StudentloggedIn()" >APPLY</a>
+        </li>
+        <li>
+            <a routerLink="/studentlist"  *ngIf="auth.ProfessorloggedIn()">STUDENT LIST</a>
+        </li>
+        <li>
+            <a routerLink="/accepted"  *ngIf="auth.ProfessorloggedIn()">ACCEPTED STUDENTS</a>
+        </li>
+        <li>
+            <a routerLink="/profile"  *ngIf="auth.StudentloggedIn()">PROFILE</a>
+        </li>
+        <li>
+            <a routerLink="/professorprofile"  *ngIf="auth.ProfessorloggedIn()">PROFILE</a>
+        </li>
+        <li>
+            <a routerLink="/logout" *ngIf="auth.ProfessorloggedIn()||auth.StudentloggedIn() " (click)="logout()" >LOGOUT</a>
+        </li>
+      </ul>
+    </div> --> 
+  </nav>
+        

@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+<!-- <....Header.....> -->
+<div class="full-screen-container">
+    <div class="login-container">
+      <h3 class="login-title">Welcome Professor</h3>
+      <form (ngSubmit)="loginUser()" #userLogin="ngForm">
+        <div class="input-group">
+          <label>Email</label>
+          <input type="email" name="email" required="required"  pattern="^[a-zA-Z0-9.%+]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}" [(ngModel)]="professor.email"/>
+        </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" name="password"  [(ngModel)]="professor.password" />
+        </div>
+        <button type="submit" class="login-button" [disabled]="userLogin.form.invalid">Sign In</button>
+      </form>
+      <p>If you don't have any account ? <a routerLink="/professorsignup"> SIGNUP</a></p>
+    </div>
+  </div>
+
+<!-- <div class="py-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <span class="anchor" id="formLogin"></span>
+   -->
+        <!-- form card login -->
+        <!-- <div class="card rounded-0">
+          <div class="card-header">
+            <h4 class="mb-0"> PROFESSOR LOGIN</h4>
+          </div>
+          <div class="card-body">
+            <form   #userLogin="ngForm" (ngSubmit)="loginUser()">
+             
+              <div >
+                <label for="Email">Email</label>
+                <input type="email" name="email" id="uname" #email="ngModel" [(ngModel)]="professor.email"  pattern="^[a-zA-Z0-9.%+]+@[a-zA-Z0-9.-]+\.[a-z]{2,4}" 
+                [class.is-invalid]="email.invalid && email.touched"
+                required/><br>
+                <small [class.d-name]="email.valid || email.touched" class="text-danger" >Enter Valid Email</small>
+                </div>
+                <br>
+              <div>
+                <label>Password</label>
+                <input type="password" name="password"  [(ngModel)]="professor.password" required minlength="8"/>
+                
+                </div>
+                <br>
+              
+              <button type="submit" [disabled]="userLogin.form.invalid" class="btn btn-success float-right">Login</button>
+            </form>  
+            <br>  
+            <p>If you don't have any account ? <a routerLink="/professorsignup"> SIGNUP</a></p>                         
+          </div> -->
+          <!--/card-block-->
+        <!-- </div> -->
+        <!-- /form card login -->
+  
+      <!-- </div>
+  
+  
+    </div>
+  </div> -->

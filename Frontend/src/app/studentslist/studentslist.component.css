@@ -1,0 +1,46 @@
+.main{
+    margin: 35px;
+    background-color: white;
+    
+}
+
+h4{
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.card-body{
+  margin-left: 25px;
+}
+
+#accepted{
+  margin-left: 25px;
+  font-size: medium;
+  /* font-weight: bold; */
+  color:white;
+  font-family: sans-serif;
+  background-color: green;
+  border: 1px solid black;
+}
+#warning{
+  margin-left: 25px;
+  font-size: medium;
+  /* font-weight: bold; */
+  color:white;
+  font-family: sans-serif;
+  background-color: orange;
+  border: 1px solid black;
+  padding: 2px;
+
+}
+
+#rejected{
+  margin-left: 25px;
+  font-size: medium;
+  /* font-weight: bold; */
+  color:white;
+  font-family: sans-serif;
+  background-color: red;
+  border: 1px solid black;
+  padding: 2px;
+
+}

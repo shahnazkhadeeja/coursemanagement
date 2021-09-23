@@ -1,0 +1,62 @@
+<div class="main">
+  <select class="browser-default" name="course" [(ngModel)]="sendmail"  required>
+    <option value="" disabled selected >Choose course</option>
+    <option *ngFor="let courses of course">{{courses.title}}</option>
+  </select>
+<br>
+  <button class="waves-effect waves-light btn" (click)=mail()>Send Mail</button>
+  <br>
+  <br>
+    <div class='card'>
+      <div class='card-header'>
+     <h4>ACCEPTED STUDENTS</h4>
+      </div>
+      
+      <div class='card-body'>            
+        <div class='table-responsive'>
+          <table class='table'>
+                <!-- *ngIf = 'products && products.length'> -->
+            <thead>
+              <tr>
+               
+                <th>Name</th>
+                
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Qualification</th>
+                <th>Course</th>
+              </tr>
+             
+            </thead>
+            <tbody *ngFor="let data of studentdata ">  
+                <tr >
+                  <td>
+                     {{data.name}} {{data.lastname}}
+                    </td>
+                   
+                    <td>
+                     {{data.dob}}
+                    </td>
+                    <td>
+                     {{data.address}} 
+                    </td>
+                    <td>
+                      {{data.email}}
+                    </td>
+                      <td>
+                     {{data.qulification}}
+                      </td>
+                        <td>
+                         {{data.course}}
+                        </td>
+                       
+                   
+                  </tr>              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    </div>
+    

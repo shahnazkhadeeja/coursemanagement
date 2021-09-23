@@ -1,0 +1,18 @@
+.card-body {
+    font-size: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.card-body input{
+margin-right: 10px;
+}
+
+h4{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.card-body{
+    margin-left: 25px;
+}
